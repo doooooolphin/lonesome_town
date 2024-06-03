@@ -1,0 +1,33 @@
+body{
+    background-color: #0f0b17;
+    text-align: center;
+    color :#ffffff;
+    font-size: 28px;
+    font-family: "Pixelify Sans";
+
+
+}
+
+footer{
+    font-size: 14px;
+}
+
+/* unvisited link */
+a:link {
+   color: #79d9ff;
+}
+  
+/* visited link */
+a:visited {
+  color: #4f83f4;
+}
+
+/* mouse over link */
+a:hover {
+  color: #c7f7ff;
+}
+ 
+/* selected link */
+a:active {
+  color: #dcfffd;
+} 
