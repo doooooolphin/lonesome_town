@@ -3,13 +3,14 @@ body{
     text-align: center;
     color :#ffffff;
     font-size: 28px;
-    font-family: "Pixelify Sans";
+    font-family: "Papyrus";
 
 
 }
 
 footer{
     font-size: 14px;
+    background-color: #07050c;
 }
 
 /* unvisited link */
