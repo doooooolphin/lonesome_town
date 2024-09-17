@@ -2,18 +2,23 @@
 const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 //document.body.appendChild(newImg);
-
+var imgData;
 
 const image = document.getElementById('img');
 //image.src = "image.png";
 canvas.width = 500;
 canvas.height = 500;
 
-function goop() {
-  ctx.drawImage(image, 0, 0, 233, 320);
+async function goop() {
+  ctx.drawImage(image, 0, 0, image.width, image.height);
 
-  const imageData = ctx.getImageData(10, 20, 80, 230);
-  console.log(imageData);
+  imgData = ctx.getImageData(0, 0, image.width, image.height);
+  console.log(imgData);
+  for (let i=0; i<imgData.data.length; i+=4) {
+    let arr = imgData.data;
+    console.log("R: " + arr[i] + " G: " + arr[i+1] + " B: " + arr[i+2] + " A: " + arr[i+3]);
+    sleep(100);
+  }
 }
 image.addEventListener("load", () => {
   goop();
